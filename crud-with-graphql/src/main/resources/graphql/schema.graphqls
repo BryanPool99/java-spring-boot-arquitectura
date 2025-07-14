@@ -1,0 +1,26 @@
+type Query {
+    # Obtener todos los usuarios
+    getAllUsers: [User]
+    # Obtener un usuario por ID
+    getUserById(userId: Int): User
+}
+
+type Mutation {
+    # Crear un nuevo usuario
+    createUser(useInput: UserInputRecord): User
+    # Actualizar un usuario existente
+    updateUser(userId: ID, updateUserInput: UserInputRecord): User
+    # Eliminar un usuario por ID
+    deleteUser(userId: ID): User
+}
+
+type User {
+    id: ID
+    name: String
+    email: String
+}
+
+input UserInputRecord {
+    name: String
+    email: String
+}
