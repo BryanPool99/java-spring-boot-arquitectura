@@ -23,6 +23,10 @@ public record User(
         }
     }
 
+    public User withId(Integer newId) {
+        return new User(newId, this.name, this.email);
+    }
+
     public User withName(String newName) {
         return new User(this.id, newName, this.email);
     }

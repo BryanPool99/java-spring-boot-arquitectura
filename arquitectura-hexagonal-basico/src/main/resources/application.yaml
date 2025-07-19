@@ -5,6 +5,3 @@ spring:
     password: ${PASSWORD}
     pool:
       enabled: true
-  graphql:
-    graphiql:
-      enabled: true
