@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: ms-auth
+  r2dbc:
+    url: r2dbc:postgresql://${SERVER}:${PORT}/${DB_NAME}?schema=${SCHEMA}
+    username: ${USERNAME}
+    password: ${PASSWORD}
+    pool:
+      enabled: true
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: ${JWT_EXPIRATION}
+
+logging:
+  level:
+    org.springframework.data.r2dbc: DEBUG
+    org.springframework.security: DEBUG
